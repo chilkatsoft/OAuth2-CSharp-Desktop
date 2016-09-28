@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -204,6 +204,11 @@ namespace OAuth2
             p.TokenEndpoint = facebookTokenEndpoint;
             p.ClientId = facebookClientId;
             p.ClientSecret = facebookClientSecret;
+
+            // Set the Scope to a comma-separated list of permissions the app wishes to request.
+            // See https://developers.facebook.com/docs/facebook-login/permissions/ for a full list of permissions.
+            p.Scope = "public_profile,user_friends,email,user_posts,user_likes,user_photos";
+
             do_oauth2(p);
 
             return;
