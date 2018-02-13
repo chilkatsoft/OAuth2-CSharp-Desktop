@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtListenPort = new System.Windows.Forms.TextBox();
+            this.btnMsGraph = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -152,7 +153,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(791, 303);
+            this.textBox1.Size = new System.Drawing.Size(978, 303);
             this.textBox1.TabIndex = 12;
             // 
             // label6
@@ -167,7 +168,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(671, 92);
+            this.label2.Location = new System.Drawing.Point(784, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 14;
@@ -175,17 +176,28 @@
             // 
             // txtListenPort
             // 
-            this.txtListenPort.Location = new System.Drawing.Point(740, 89);
+            this.txtListenPort.Location = new System.Drawing.Point(853, 89);
             this.txtListenPort.Name = "txtListenPort";
             this.txtListenPort.Size = new System.Drawing.Size(51, 20);
             this.txtListenPort.TabIndex = 15;
             this.txtListenPort.Text = "3017";
             // 
+            // btnMsGraph
+            // 
+            this.btnMsGraph.Location = new System.Drawing.Point(668, 81);
+            this.btnMsGraph.Name = "btnMsGraph";
+            this.btnMsGraph.Size = new System.Drawing.Size(100, 35);
+            this.btnMsGraph.TabIndex = 16;
+            this.btnMsGraph.Text = "Microsoft Graph";
+            this.btnMsGraph.UseVisualStyleBackColor = true;
+            this.btnMsGraph.Click += new System.EventHandler(this.btnMsGraph_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 564);
+            this.ClientSize = new System.Drawing.Size(1033, 564);
+            this.Controls.Add(this.btnMsGraph);
             this.Controls.Add(this.txtListenPort);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
@@ -226,6 +238,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtListenPort;
+        private System.Windows.Forms.Button btnMsGraph;
         }
     }
 

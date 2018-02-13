@@ -24,6 +24,8 @@ namespace OAuth2
         const string salesForceTokenEndpoint = "https://login.salesforce.com/services/oauth2/token";
         const string gitAuthEndpoint = "https://github.com/login/oauth/authorize";
         const string gitTokenEndpoint = "https://github.com/login/oauth/access_token";
+        const string msGraphAuthEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
+        const string msGraphTokenEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/token";
 
         // Replace these with actual values.
         const string facebookClientId = "FACEBOOK-CLIENT-ID";
@@ -40,6 +42,9 @@ namespace OAuth2
 
         const string gitClientId = "GITHUB-CLIENT-ID";
         const string gitClientSecret = "GITHUB-CLIENT-SECRET";
+
+        const string msGraphClientId = "MSGRAPH-CLIENT-ID";
+        const string msGraphClientSecret = "MSGRAPH-CLIENT-SECRET";
 
 
         public Form1()
@@ -286,6 +291,22 @@ namespace OAuth2
             do_oauth2(p);
 
             return;
+            }
+
+        private void btnMsGraph_Click(object sender, EventArgs e)
+            {
+            clearTextBoxes();
+            disposeOldOAuth2();
+
+            OAuth2Params p = new OAuth2Params();
+
+            p.ListenPort = Convert.ToInt32(txtListenPort.Text);
+            p.AuthorizationEndpoint = msGraphAuthEndpoint;
+            p.TokenEndpoint = msGraphTokenEndpoint;
+            p.ClientId = msGraphClientId;
+            p.ClientSecret = msGraphClientSecret;
+            p.Scope = "openid profile offline_access user.readwrite mail.readwrite mail.send files.readwrite";
+            do_oauth2(p);
             }
 
 
