@@ -1,1 +1,11 @@
 C:\ckGitHubProjects\OAuth2-C#-Desktop\OAuth2\bin\Debug\OAuth2.exe.config
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\bin\Debug\OAuth2.exe.config
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\bin\Debug\OAuth2.exe
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\bin\Debug\OAuth2.pdb
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\bin\Debug\ChilkatDotNet45.dll
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\obj\Debug\OAuth2.csprojResolveAssemblyReference.cache
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\obj\Debug\OAuth2.Form1.resources
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\obj\Debug\OAuth2.Properties.Resources.resources
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\obj\Debug\OAuth2.csproj.GenerateResource.Cache
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\obj\Debug\OAuth2.exe
+C:\ckGitHubProjects\OAuth2-CSharp-Desktop\OAuth2\obj\Debug\OAuth2.pdb

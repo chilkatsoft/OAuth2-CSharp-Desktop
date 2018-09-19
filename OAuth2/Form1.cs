@@ -112,7 +112,7 @@ namespace OAuth2
                 }
             }
 
-        private void do_oauth2(OAuth2Params p)
+        private void do_oauth2(OAuth2Params p, bool bCodeChallenge = true)
             {
             Chilkat.OAuth2 oauth2 = new Chilkat.OAuth2();
 
@@ -122,8 +122,11 @@ namespace OAuth2
             oauth2.TokenEndpoint = p.TokenEndpoint;
             oauth2.ClientId = p.ClientId;
             oauth2.ClientSecret = p.ClientSecret;
-            oauth2.CodeChallenge = true;
-            oauth2.CodeChallengeMethod = "S256";
+            oauth2.CodeChallenge = bCodeChallenge;
+            if (bCodeChallenge)
+                {
+                oauth2.CodeChallengeMethod = "S256";
+                }
             if ((p.Scope != null) && (p.Scope.Length > 0)) oauth2.Scope = p.Scope;
 
             // Begin the OAuth2 flow.  Returns a URL that should be loaded in a browser.
@@ -254,7 +257,7 @@ namespace OAuth2
             p.TokenEndpoint = linkedinTokenEndpoint;
             p.ClientId = linkedinClientId;
             p.ClientSecret = linkedinClientSecret;
-            do_oauth2(p);
+            do_oauth2(p,false);
 
             return;
             }
